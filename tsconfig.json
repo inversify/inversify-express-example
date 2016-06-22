@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "compileOnSave": false,
+    "filesGlob": [
+        "BasicExample/**/*.ts",
+        "typings/index.d.ts",
+        "node_modules/inversify-dts/**/*.d.ts"
+    ],
+    "files": [
+        "BasicExample/bootstrap.ts",
+        "BasicExample/controller/home.ts",
+        "BasicExample/controller/user.ts",
+        "BasicExample/service/user.ts",
+        "BasicExample/test/controller/home.spec.ts",
+        "BasicExample/test/controller/user.spec.ts",
+        "BasicExample/test/service/user.spec.ts",
+        "typings/index.d.ts",
+        "node_modules/inversify-dts/inversify-binding-decorators/inversify-binding-decorators.d.ts",
+        "node_modules/inversify-dts/inversify-express-utils/inversify-express-utils.d.ts",
+        "node_modules/inversify-dts/inversify-logger-middleware/inversify-logger-middleware.d.ts",
+        "node_modules/inversify-dts/inversify/inversify.d.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}
