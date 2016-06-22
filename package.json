@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Examples for using inversify with expressjs",
   "scripts": {
-    "test": "nyc -r=text -r=lcov -i ts-node/register -e .ts mocha --require ts-node/register"
+    "test": "nyc -r=text -r=lcov -i ts-node/register -e .ts mocha --require ts-node/register",
+    "postinstall": "typings install"
   },
   "author": "lholznagel",
   "license": "MIT",
