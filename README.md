@@ -12,6 +12,7 @@ If you want to run the unit tests, simply use `npm test <example>/**/*.ts`
 
 ## Currently available examples
 
-Name  | Description
------ | ----------------------------------------
-Basic | A really basic example. Nothing to fancy
+Name    | Description
+------- | ------------------------------------------------------------------------
+Basic   | A really basic example. Nothing to fancy
+MongoDB | Similar to the basic example. This time with MongoDB and some middleware
