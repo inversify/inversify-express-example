@@ -10,7 +10,7 @@ import 'reflect-metadata';
 @Controller('/user')
 export class UserController {
 
-  constructor(@inject('UserService') private userService: UserService) { }
+  constructor( @inject('UserService') private userService: UserService) { }
 
   @Get('/')
   public getUsers(): Promise<User[]> {
@@ -24,7 +24,6 @@ export class UserController {
 
   @Post('/')
   public newUser(request: Request): Promise<User> {
-    console.log(request);
     return this.userService.newUser(request.body);
   }
 

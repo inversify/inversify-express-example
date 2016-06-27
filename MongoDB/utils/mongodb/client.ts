@@ -19,12 +19,6 @@ export class MongoDBClient {
     });
   }
 
-  public findOne(collection: string, filter: Object, result: (error, data) => void): void {
-    this.db.collection(collection).find(filter).limit(1).toArray((error, find) => {
-      return result(error, find[0]);
-    });
-  }
-
   public findOneById(collection: string, objectId: string, result: (error, data) => void): void {
     this.db.collection(collection).find({ _id: new ObjectID(objectId) }).limit(1).toArray((error, find) => {
       return result(error, find[0]);

@@ -29,7 +29,7 @@
         "MongoDB/service/user.ts",
         "MongoDB/test/controller/home.spec.ts",
         "MongoDB/test/controller/user.spec.ts",
-        "MongoDB/test/service/user.spec.ts",
+        "MongoDB/test/utils/mongodb/client.spec.ts",
         "MongoDB/utils/mongodb/client.ts",
         "MongoDB/utils/mongodb/connection.ts",
         "typings/index.d.ts",
