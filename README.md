@@ -1,6 +1,6 @@
 # inversify-express-example
 
-[![Travis](https://img.shields.io/travis/inversify/inversify-express-example.svg?style=flat-square&label=Travis)](https://travis-ci.org/inversify/inversify-express-example) [![Appveyor](https://img.shields.io/appveyor/ci/inversify/inversify-express-example.svg?style=flat-square&label=Appveyor)](https://ci.appveyor.com/project/inversify/inversify-express-example)
+[![Travis](https://img.shields.io/travis/inversify/inversify-express-example.svg?style=flat-square&label=Travis)](https://travis-ci.org/inversify/inversify-express-example) [![Appveyor](https://img.shields.io/appveyor/ci/remojansen/inversify-express-example.svg?style=flat-square&label=Appveyor)](https://ci.appveyor.com/project/remojansen/inversify-express-example)
 
 >The official express + inversify + inversify-express-utils example
 
