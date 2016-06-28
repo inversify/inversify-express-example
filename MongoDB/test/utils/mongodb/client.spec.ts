@@ -1,126 +1,101 @@
+import { Db, MongoClient, ObjectID } from 'mongodb';
 import { expect } from 'chai';
-import { UserController } from '../../controller/user';
-import { UserService } from '../../service/user';
+import { MongoDBClient } from '../../../utils/mongodb/client';
+import { User } from '../../../models/user';
 
-class MongoDBClientMock {
-  public db;
+describe('MongoDBClient', () => {
+  let mongoClient: MongoDBClient;
+  let mongoId: string;
+  let driverDb: Db;
 
-  public find(collection, filter, result: (error, data) => void) {
-    return result(null, [{
-      email: 'lorem@ipsum.com',
-      name: 'Lorem'
-    }, {
-        email: 'doloe@sit.com',
-        name: 'Dolor'
-      }]);
-  }
+  /** Insert some testdata */
+  before((done) => {
+    MongoClient.connect('mongodb://localhost:27017/inversify-express-example', (error, db: Db) => {
+      db.collection('user').drop();
 
-  public findOneById(collection, objectId, result: (error, data) => void) {
-    return result(null, {
-      email: 'lorem@ipsum.com',
-      name: 'Lorem'
+      db.collection('user').insertOne({
+        email: 'lorem@ipsum.com',
+        name: 'Lorem'
+      }, (error, insert) => {
+        mongoId = insert.ops[0]._id;
+        driverDb = db;
+        done();
+      });
     });
-  }
+  });
 
-  public insert(collection, model, result: (error, data) => void) {
-    return result(null, {
-      email: 'test@test.com',
-      name: 'test'
-    });
-  }
-
-  public update(collection, objectId, model, result: (error, data) => void) {
-    return result(null, {
-      email: 'changed@changed.com',
-      name: 'Lorem'
-    });
-  }
-
-  public remove(collection, objectId, result: (error, data) => void) {
-    return result(null, 'Lorem');
-  }
-}
-
-describe('UserController', () => {
-  let controller;
-
-  beforeEach(() => {
-    controller = new UserController(new UserService(new MongoDBClientMock()));
+  before((done) => {
+    mongoClient = new MongoDBClient();
+    // let the mongodb connect
+    setTimeout(() => {
+      done();
+    }, 1000);
   });
 
   it('should get back all user', (done) => {
-    controller.getUsers().then((data) => {
-      expect(data).to.deep.equal(
-        [{
-          email: 'lorem@ipsum.com',
-          name: 'Lorem'
-        }, {
-            email: 'doloe@sit.com',
-            name: 'Dolor'
-          }]
-      );
+    mongoClient.find('user', {}, (error, data) => {
+      expect(error).to.be.null;
+
+      expect(data).to.have.length(1);
+      expect(data[0].email).to.be.equal('lorem@ipsum.com');
+      expect(data[0].name).to.be.equal('Lorem');
 
       done();
     });
   });
 
   it('should give back the right user', (done) => {
-    controller.getUser({
-      params: {
-        id: 'Lorem'
-      }
-    }).then((data) => {
-      expect(data).to.deep.equal({
-        email: 'lorem@ipsum.com',
-        name: 'Lorem'
-      });
+    mongoClient.findOneById('user', mongoId, (error, data) => {
+      expect(error).to.be.null;
+
+      expect(data.email).to.be.equal('lorem@ipsum.com');
+      expect(data.name).to.be.equal('Lorem');
 
       done();
     });
   });
 
   it('should add a new user', (done) => {
-    controller.newUser({
-      body: {
-        email: 'test@test.com',
-        name: 'test'
-      }
-    }).then((result) => {
-      expect(result).to.deep.equal({
-        email: 'test@test.com',
-        name: 'test'
-      });
+    mongoClient.insert('user', new User('dorem@sit.com', 'Dorem'), (error, data) => {
+      expect(error).to.be.null;
 
-      done();
+      expect(data.email).to.be.equal('dorem@sit.com');
+      expect(data.name).to.be.equal('Dorem');
+
+      driverDb.collection('user').find().toArray((checkError, checkData) => {
+        expect(checkData).to.have.length(2);
+
+        driverDb.collection('user').deleteOne({ _id: new ObjectID(data._id) }, (cleanError, cleanData) => {
+          done();
+        });
+      });
     });
   });
 
   it('should update a existing user', (done) => {
-    controller.updateUser({
-      body: {
-        email: 'changed@changed.com',
-        name: 'Lorem'
-      }, params: {
-        id: 'Lorem'
-      }
-    }).then((result) => {
-      expect(result).to.deep.equal({
-        email: 'changed@changed.com',
-        name: 'Lorem'
-      });
+    mongoClient.update('user', mongoId, new User('test@ipsum.com', 'Test', mongoId), (error, data) => {
+      expect(error).to.be.null;
 
-      done();
+      expect(data.email).to.be.equal('test@ipsum.com');
+      expect(data.name).to.be.equal('Test');
+
+      driverDb.collection('user').findOne({
+        _id: mongoId
+      }, (checkError, checkData) => {
+        expect(checkData.email).to.equal('test@ipsum.com');
+        expect(checkData.name).to.equal('Test');
+
+        done();
+      });
     });
   });
 
   it('should delete a user', (done) => {
-    controller.deleteUser({
-      params: {
-        id: 'Lorem'
-      }
-    }).then((result) => {
-      expect(result).to.equal('Lorem');
-      done();
+    mongoClient.remove('user', mongoId, (error, data) => {
+      driverDb.collection('user').find().toArray((checkError, checkData) => {
+        expect(checkData).to.have.length(0);
+        done();
+      });
     });
   });
 });

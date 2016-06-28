@@ -27,13 +27,13 @@ export class MongoDBClient {
 
   public insert(collection: string, model: User, result: (error, data) => void): void {
     this.db.collection(collection).insertOne(model, (error, insert) => {
-      return result(error, insert);
+      return result(error, insert.ops[0]);
     });
   }
 
   public update(collection: string, objectId: string, model: User, result: (error, data) => void): void {
     this.db.collection(collection).updateOne({ _id: new ObjectID(objectId) }, model, (error, update) => {
-      return result(error, update);
+      return result(error, model);
     });
   }
 

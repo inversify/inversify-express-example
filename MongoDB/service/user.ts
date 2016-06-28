@@ -15,11 +15,7 @@ export class UserService {
   public getUsers(): Promise<User[]> {
     return new Promise<User[]>((resolve, reject) => {
       this.mongoClient.find('user', {}, (error, data: User[]) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(data);
-        }
+        resolve(data);
       });
     });
   }
@@ -27,11 +23,7 @@ export class UserService {
   public getUser(id: string): Promise<User> {
     return new Promise<User>((resolve, reject) => {
       this.mongoClient.findOneById('user', id, (error, data: User) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(data);
-        }
+        resolve(data);
       });
     });
   }
@@ -39,11 +31,7 @@ export class UserService {
   public newUser(user: User): Promise<User> {
     return new Promise<User>((resolve, reject) => {
       this.mongoClient.insert('user', user, (error, data: User) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(data);
-        }
+        resolve(data);
       });
     });
   }
@@ -51,11 +39,7 @@ export class UserService {
   public updateUser(id: string, user: User): Promise<User> {
     return new Promise<User>((resolve, reject) => {
       this.mongoClient.update('user', id, user, (error, data: User) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(data);
-        }
+        resolve(data);
       });
     });
   }
@@ -63,11 +47,7 @@ export class UserService {
   public deleteUser(id: string): Promise<any> {
     return new Promise<any>((resolve, reject) => {
       this.mongoClient.remove('user', id, (error, data: any) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(data);
-        }
+        resolve(data);
       });
     });
   }
