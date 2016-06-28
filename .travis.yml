@@ -18,7 +18,7 @@ node_js:
 before_install:
   - npm config set progress=false
   - npm install -g typings
-  - npm typings install
+  - typings install
 
 before_script:
   - npm prune
