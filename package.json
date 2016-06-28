@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "description": "Examples for using inversify with expressjs",
   "scripts": {
-    "test": "nyc -r=text -r=lcov -i ts-node/register -e .ts mocha --require ts-node/register",
+    "test": "nyc -r=text -i ts-node/register -e .ts mocha -t 5000 --require ts-node/register",
+    "test:all": "npm test **/*.spec.ts",
     "postinstall": "typings install"
   },
   "author": "lholznagel",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "4.14.0",
+    "helmet": "^2.1.1",
     "inversify": "2.0.0-rc.1",
-    "inversify-dts": "1.1.0",
+    "inversify-dts": "1.2.0",
     "inversify-express-utils": "1.0.0-rc.1",
+    "mongodb": "^2.1.18",
     "reflect-metadata": "0.1.3"
   },
   "devDependencies": {
@@ -21,5 +25,10 @@
     "nyc": "6.6.1",
     "ts-node": "0.9.3",
     "typescript": "1.8.10"
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.ts"
+    ]
   }
 }
