@@ -18,5 +18,6 @@ To run alle tests simply run `npm run test:all`
 
 Name    | Description
 ------- | -------------------------------------------------------------------------------------------------------------------------------
-Basic   | A really basic example. Nothing to fancy
-MongoDB | Similar to the basic example. This time with MongoDB and some middleware. For detailed information see the readme in the folder
+Basic   | A really basic example. Nothing to fancy.
+MongoDB | Similar to the basic example. This time with MongoDB and some middleware. For detailed information see the readme in the folder.
+BindingDecorators | Similar to the basic example. This time with inversify-binding-decorators.
