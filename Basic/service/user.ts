@@ -7,6 +7,7 @@ export interface IUser {
 
 @injectable()
 export class UserService {
+
   private userStorage: IUser[] = [{
     email: 'lorem@ipsum.com',
     name: 'Lorem'

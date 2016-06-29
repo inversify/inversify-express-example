@@ -3,12 +3,13 @@ import { injectable, inject } from 'inversify';
 import { Request } from 'express';
 import { User } from '../models/user';
 import { UserService } from '../service/user';
+import TYPES from '../constant/types';
 
 @injectable()
 @Controller('/user')
 export class UserController {
 
-  constructor( @inject('UserService') private userService: UserService) { }
+  constructor( @inject(TYPES.UserService) private userService: UserService) { }
 
   @Get('/')
   public getUsers(): Promise<User[]> {

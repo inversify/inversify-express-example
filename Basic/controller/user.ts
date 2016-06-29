@@ -2,12 +2,13 @@ import { Controller, Get, Post, Put, Delete } from 'inversify-express-utils';
 import { injectable, inject } from 'inversify';
 import { IUser, UserService } from '../service/user';
 import { Request } from 'express';
+import TYPES from '../constant/types';
 
 @injectable()
 @Controller('/user')
 export class UserController {
 
-  constructor(@inject('UserService') private userService: UserService) { }
+  constructor(@inject(TYPES.UserService) private userService: UserService) { }
 
   @Get('/')
   public getUsers(): IUser[] {

@@ -1,13 +1,14 @@
 import { inject, injectable } from 'inversify';
 import { MongoDBClient } from '../utils/mongodb/client';
 import { User } from '../models/user';
+import TYPES from '../constant/types';
 
 @injectable()
 export class UserService {
   private mongoClient: MongoDBClient;
 
   constructor(
-    @inject('MongoDBClient') mongoClient: MongoDBClient
+    @inject(TYPES.MongoDBClient) mongoClient: MongoDBClient
   ) {
     this.mongoClient = mongoClient;
   }
