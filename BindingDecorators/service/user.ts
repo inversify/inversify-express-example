@@ -1,9 +1,10 @@
-import { inject, injectable } from 'inversify';
+import { provide, inject } from '../ioc/ioc';
+import TYPES from '../constant/types';
+import TAGS from '../constant/tags';
 import { MongoDBClient } from '../utils/mongodb/client';
 import { User } from '../models/user';
-import TYPES from '../constant/types';
 
-@injectable()
+@provide(TYPES.UserService)
 export class UserService {
   private mongoClient: MongoDBClient;
 
