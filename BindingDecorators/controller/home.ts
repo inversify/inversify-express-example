@@ -1,8 +1,9 @@
 import { Controller, Get } from 'inversify-express-utils';
-import { injectable } from 'inversify';
-import 'reflect-metadata';
+import { provideNamed } from '../ioc/ioc';
+import TYPES from '../constant/types';
+import TAGS from '../constant/tags';
 
-@injectable()
+@provideNamed(TYPES.Controller, TAGS.HomeController)
 @Controller('/')
 export class HomeController {
   @Get('/')

@@ -1,18 +1,14 @@
-// general imports
+import 'reflect-metadata';
 import { Controller, InversifyExpressServer } from 'inversify-express-utils';
 import { Kernel } from 'inversify';
 import * as bodyParser from 'body-parser';
 import * as helmet from 'helmet';
 import TYPES from './constant/types';
 import TAGS from './constant/tags';
-
-// imports for the kernel
 import { HomeController } from './controller/home';
 import { MongoDBClient } from './utils/mongodb/client';
 import { UserController } from './controller/user';
 import { UserService } from './service/user';
-
-import 'reflect-metadata';
 
 // load everything needed to the kernel
 let kernel = new Kernel();

@@ -1,5 +1,6 @@
 import { Controller, Get } from 'inversify-express-utils';
 import { injectable } from 'inversify';
+import 'reflect-metadata';
 
 @injectable()
 @Controller('/')
