@@ -4,8 +4,6 @@ import { Request } from 'express';
 import { User } from '../models/user';
 import { UserService } from '../service/user';
 
-import 'reflect-metadata';
-
 @injectable()
 @Controller('/user')
 export class UserController {

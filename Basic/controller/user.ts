@@ -3,8 +3,6 @@ import { injectable, inject } from 'inversify';
 import { IUser, UserService } from '../service/user';
 import { Request } from 'express';
 
-import 'reflect-metadata';
-
 @injectable()
 @Controller('/user')
 export class UserController {
