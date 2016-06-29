@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 import { Controller, InversifyExpressServer } from 'inversify-express-utils';
 import { Kernel } from 'inversify';
+import { makeLoggerMiddleware } from 'inversify-logger-middleware';
 import * as bodyParser from 'body-parser';
 import * as helmet from 'helmet';
 import TYPES from './constant/types';
@@ -12,6 +13,12 @@ import { UserService } from './service/user';
 
 // load everything needed to the kernel
 let kernel = new Kernel();
+
+if (process.env.NODE_ENV === 'development') {
+    let logger = makeLoggerMiddleware();
+    kernel.applyMiddleware(logger);
+}
+
 kernel.bind<Controller>(TYPES.Controller).to(HomeController).whenTargetNamed(TAGS.HomeController);
 kernel.bind<Controller>(TYPES.Controller).to(UserController).whenTargetNamed(TAGS.UserController);
 kernel.bind<MongoDBClient>(TYPES.MongoDBClient).to(MongoDBClient);

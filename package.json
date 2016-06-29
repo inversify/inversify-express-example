@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
+    "inversify-logger-middleware": "^1.0.0-rc.3",
     "mocha": "2.5.3",
     "nyc": "6.6.1",
     "ts-node": "0.9.3",
