@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Examples for using inversify with expressjs",
   "scripts": {
-    "test": "nyc -r=text -i ts-node/register -e .ts mocha -t 5000 --require ts-node/register",
+    "test": "nyc -r=text -i ts-node/register -e .ts mocha -t 5000 --require ts-node/register --require node_modules/reflect-metadata/Reflect.ts",
     "test:all": "npm test **/*.spec.ts",
     "postinstall": "typings install"
   },
