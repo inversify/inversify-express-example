@@ -1,5 +1,4 @@
 const TYPES = {
-    Controller: Symbol('Controller'),
     UserService: Symbol('UserService')
 };
 

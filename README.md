@@ -8,7 +8,12 @@
 
 First of all run `npm install`
 
-You can start a example by using `ts-node <example>/bootstrap`. This will start up the server and you can use the example
+You can start a example by using `ts-node` 
+```
+$ npm install -g ts-node
+$ ts-node <example>/bootstrap
+```
+This will start up the server and you can use the example
 
 If you want to run the unit tests, simply use `npm test <example>/**/*.spec.ts`
 

@@ -1,9 +1,9 @@
 {
   "globalDependencies": {
-    "bluebird": "registry:dt/bluebird#2.0.0+20160319051630",
+    "bluebird": "registry:dt/bluebird#2.0.0+20160701023356",
     "body-parser": "registry:dt/body-parser#0.0.0+20160619023215",
     "express": "registry:dt/express#4.0.0+20160317120654",
-    "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160625155614",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160701212727",
     "helmet": "registry:dt/helmet#0.0.0+20160512043842",
     "mocha": "registry:dt/mocha#2.2.5+20160619032855",
     "nconf": "registry:dt/nconf#0.0.0+20160316155526",
