@@ -1,6 +1,5 @@
 import { provide, inject } from '../ioc/ioc';
 import TYPES from '../constant/types';
-import TAGS from '../constant/tags';
 import { MongoDBClient } from '../utils/mongodb/client';
 import { User } from '../models/user';
 

@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { Controller, InversifyExpressServer } from 'inversify-express-utils';
+import { Controller, InversifyExpressServer, TYPE } from 'inversify-express-utils';
 import { Kernel } from 'inversify';
 import * as bodyParser from 'body-parser';
 import TYPES from './constant/types';
@@ -11,9 +11,9 @@ import { UserService } from './service/user';
 // load everything needed to the kernel
 let kernel = new Kernel();
 
-kernel.bind<Controller>(TYPES.Controller).to(HomeController).whenTargetNamed(TAGS.HomeController);
-kernel.bind<Controller>(TYPES.Controller).to(UserController).whenTargetNamed(TAGS.UserController);
-kernel.bind<UserService>(TYPES.Controller).to(UserService);
+kernel.bind<Controller>(TYPE.Controller).to(HomeController).whenTargetNamed(TAGS.HomeController);
+kernel.bind<Controller>(TYPE.Controller).to(UserController).whenTargetNamed(TAGS.UserController);
+kernel.bind<UserService>(TYPES.UserService).to(UserService);
 
 // start the server
 let server = new InversifyExpressServer(kernel);

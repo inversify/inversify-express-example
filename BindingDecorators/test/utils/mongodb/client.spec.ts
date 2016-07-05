@@ -16,7 +16,7 @@ describe('MongoDBClient', () => {
       db.collection('user').insertOne({
         email: 'lorem@ipsum.com',
         name: 'Lorem'
-      }, (error, insert) => {
+      }, (e, insert) => {
         mongoId = insert.ops[0]._id;
         driverDb = db;
         done();
