@@ -24,7 +24,7 @@
     "chai": "3.5.0",
     "inversify-logger-middleware": "^1.0.0-rc.3",
     "mocha": "2.5.3",
-    "nyc": "6.6.1",
+    "nyc": "7.0.0",
     "ts-node": "0.9.3",
     "typescript": "1.8.10"
   },
