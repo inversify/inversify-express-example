@@ -24,6 +24,7 @@ before_install:
   - typings install
 
 before_script:
+  - sleep 15
   - npm prune
 
 script:
