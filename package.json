@@ -12,7 +12,7 @@
   "dependencies": {
     "body-parser": "1.15.2",
     "express": "4.14.0",
-    "helmet": "2.1.1",
+    "helmet": "2.1.2",
     "inversify": "2.0.0-rc.1",
     "inversify-binding-decorators": "1.0.0-rc.2",
     "inversify-dts": "1.4.0",
