@@ -13,9 +13,9 @@
     "body-parser": "1.15.2",
     "express": "4.14.0",
     "helmet": "2.1.2",
-    "inversify": "2.0.0-rc.1",
+    "inversify": "2.0.0-rc.5",
     "inversify-binding-decorators": "1.0.0-rc.2",
-    "inversify-dts": "1.4.0",
+    "inversify-dts": "1.5.0",
     "inversify-express-utils": "1.0.0-rc.2",
     "mongodb": "2.2.5",
     "reflect-metadata": "0.1.3"
