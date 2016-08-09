@@ -18,7 +18,7 @@
     "inversify-dts": "1.6.0",
     "inversify-express-utils": "1.0.0-rc.2",
     "mongodb": "2.2.5",
-    "reflect-metadata": "0.1.4"
+    "reflect-metadata": "0.1.5"
   },
   "devDependencies": {
     "chai": "3.5.0",
