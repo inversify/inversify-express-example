@@ -5,14 +5,16 @@
         "noImplicitAny": false,
         "sourceMap": false,
         "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "moduleResolution": "node"
     },
     "compileOnSave": false,
     "filesGlob": [
         "Basic/**/*.ts",
         "BindingDecorators/**/*.ts",
         "MongoDB/**/*.ts",
-        "typings/index.d.ts"
+        "typings/index.d.ts",
+        "node_modules/inversify-dts/**/*.d.ts"
     ],
     "files": [
         "Basic/bootstrap.ts",
@@ -50,7 +52,12 @@
         "MongoDB/test/utils/mongodb/client.spec.ts",
         "MongoDB/utils/mongodb/client.ts",
         "MongoDB/utils/mongodb/connection.ts",
-        "typings/index.d.ts"
+        "typings/index.d.ts",
+        "node_modules/inversify-dts/inversify-binding-decorators/inversify-binding-decorators.d.ts",
+        "node_modules/inversify-dts/inversify-devtools/inversify-devtools.d.ts",
+        "node_modules/inversify-dts/inversify-express-utils/inversify-express-utils.d.ts",
+        "node_modules/inversify-dts/inversify-logger-middleware/inversify-logger-middleware.d.ts",
+        "node_modules/inversify-dts/inversify/inversify.d.ts"
     ],
     "atom": {
         "rewriteTsconfig": true
