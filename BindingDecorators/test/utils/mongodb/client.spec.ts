@@ -11,15 +11,15 @@ describe('MongoDBClient', () => {
   /** Insert some testdata */
   before((done) => {
     MongoClient.connect('mongodb://localhost:27017/inversify-express-example', (error, db: Db) => {
-      db.collection('user').drop();
-
-      db.collection('user').insertOne({
-        email: 'lorem@ipsum.com',
-        name: 'Lorem'
-      }, (e, insert) => {
-        mongoId = insert.ops[0]._id;
-        driverDb = db;
-        done();
+      db.collection('user').drop((dropError, result) => {
+        db.collection('user').insertOne({
+          email: 'lorem@ipsum.com',
+          name: 'Lorem'
+        }, (e, insert) => {
+          mongoId = insert.ops[0]._id;
+          driverDb = db;
+          done();
+        });
       });
     });
   });
