@@ -17,7 +17,7 @@
     "inversify-binding-decorators": "1.0.0-rc.2",
     "inversify-dts": "2.0.0",
     "inversify-express-utils": "1.0.0-rc.2",
-    "mongodb": "2.2.5",
+    "mongodb": "2.2.6",
     "reflect-metadata": "0.1.8"
   },
   "devDependencies": {
