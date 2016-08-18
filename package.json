@@ -25,7 +25,7 @@
     "inversify-logger-middleware": "1.0.0-rc.3",
     "mocha": "3.0.2",
     "nyc": "8.1.0",
-    "ts-node": "1.2.2",
+    "ts-node": "1.2.3",
     "typescript": "1.8.10"
   },
   "nyc": {
