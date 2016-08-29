@@ -14,7 +14,7 @@
     "express": "4.14.0",
     "helmet": "2.1.2",
     "inversify": "2.0.0-rc.12",
-    "inversify-binding-decorators": "1.0.0-rc.2",
+    "inversify-binding-decorators": "1.0.0",
     "inversify-dts": "2.2.0",
     "inversify-express-utils": "1.0.0-rc.2",
     "mongodb": "2.2.8",
