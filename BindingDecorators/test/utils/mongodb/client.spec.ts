@@ -1,3 +1,5 @@
+import 'mocha';
+
 import { Db, MongoClient, ObjectID } from 'mongodb';
 import { expect } from 'chai';
 import { MongoDBClient } from '../../../utils/mongodb/client';

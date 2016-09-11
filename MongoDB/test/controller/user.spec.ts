@@ -1,3 +1,5 @@
+import 'mocha';
+
 import { expect } from 'chai';
 import { UserController } from '../../controller/user';
 import { UserService } from '../../service/user';
