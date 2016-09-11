@@ -1,5 +1,3 @@
-import 'mocha';
-
 import { expect } from 'chai';
 import { UserService } from '../../service/user';
 

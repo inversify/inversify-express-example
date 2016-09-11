@@ -6,6 +6,9 @@
             "es6",
             "dom"
         ],
+        "types": [
+            "mocha"
+        ],
         "noImplicitAny": false,
         "sourceMap": false,
         "emitDecoratorMetadata": true,
