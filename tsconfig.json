@@ -2,6 +2,16 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "es5",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "types": [
+            "inversify",
+            "inversify-express-utils",
+            "mocha",
+            "reflect-metadata"
+        ],
         "noImplicitAny": false,
         "sourceMap": false,
         "emitDecoratorMetadata": true,
@@ -12,9 +22,7 @@
     "filesGlob": [
         "Basic/**/*.ts",
         "BindingDecorators/**/*.ts",
-        "MongoDB/**/*.ts",
-        "typings/index.d.ts",
-        "node_modules/inversify-dts/**/*.d.ts"
+        "MongoDB/**/*.ts"
     ],
     "files": [
         "Basic/bootstrap.ts",
@@ -51,13 +59,7 @@
         "MongoDB/test/controller/user.spec.ts",
         "MongoDB/test/utils/mongodb/client.spec.ts",
         "MongoDB/utils/mongodb/client.ts",
-        "MongoDB/utils/mongodb/connection.ts",
-        "typings/index.d.ts",
-        "node_modules/inversify-dts/inversify-binding-decorators/inversify-binding-decorators.d.ts",
-        "node_modules/inversify-dts/inversify-devtools/inversify-devtools.d.ts",
-        "node_modules/inversify-dts/inversify-express-utils/inversify-express-utils.d.ts",
-        "node_modules/inversify-dts/inversify-logger-middleware/inversify-logger-middleware.d.ts",
-        "node_modules/inversify-dts/inversify/inversify.d.ts"
+        "MongoDB/utils/mongodb/connection.ts"
     ],
     "atom": {
         "rewriteTsconfig": true

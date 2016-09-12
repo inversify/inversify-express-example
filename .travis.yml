@@ -20,8 +20,6 @@ node_js:
 
 before_install:
   - npm config set progress=false
-  - npm install -g typings
-  - typings install
 
 before_script:
   - sleep 15
