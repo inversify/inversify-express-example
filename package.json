@@ -28,7 +28,7 @@
     "@types/helmet": "0.0.33",
     "@types/inversify": "2.0.31",
     "@types/mocha": "2.2.33",
-    "@types/mongodb": "2.1.34",
+    "@types/mongodb": "2.1.35",
     "@types/morgan": "^1.7.32",
     "chai": "3.5.0",
     "mocha": "3.1.2",
