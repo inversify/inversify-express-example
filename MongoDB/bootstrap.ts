@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { interfaces, Controller, InversifyExpressServer, TYPE } from 'inversify-express-utils';
-import { Kernel } from 'inversify';
+import { Container } from 'inversify';
 import { makeLoggerMiddleware } from 'inversify-logger-middleware';
 import * as bodyParser from 'body-parser';
 import * as helmet from 'helmet';
@@ -12,20 +12,20 @@ import { UserController } from './controller/user';
 import { UserService } from './service/user';
 
 // load everything needed to the kernel
-let kernel = new Kernel();
+let container = new Container();
 
 if (process.env.NODE_ENV === 'development') {
     let logger = makeLoggerMiddleware();
-    kernel.applyMiddleware(logger);
+    container.applyMiddleware(logger);
 }
 
-kernel.bind<interfaces.Controller>(TYPE.Controller).to(HomeController).whenTargetNamed(TAGS.HomeController);
-kernel.bind<interfaces.Controller>(TYPE.Controller).to(UserController).whenTargetNamed(TAGS.UserController);
-kernel.bind<MongoDBClient>(TYPES.MongoDBClient).to(MongoDBClient);
-kernel.bind<UserService>(TYPES.UserService).to(UserService);
+container.bind<interfaces.Controller>(TYPE.Controller).to(HomeController).whenTargetNamed(TAGS.HomeController);
+container.bind<interfaces.Controller>(TYPE.Controller).to(UserController).whenTargetNamed(TAGS.UserController);
+container.bind<MongoDBClient>(TYPES.MongoDBClient).to(MongoDBClient);
+container.bind<UserService>(TYPES.UserService).to(UserService);
 
 // start the server
-let server = new InversifyExpressServer(kernel);
+let server = new InversifyExpressServer(container);
 server.setConfig((app) => {
   app.use(bodyParser.urlencoded({
     extended: true
