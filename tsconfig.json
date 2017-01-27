@@ -6,12 +6,6 @@
             "es6",
             "dom"
         ],
-        "types": [
-            "inversify",
-            "inversify-express-utils",
-            "mocha",
-            "reflect-metadata"
-        ],
         "noImplicitAny": false,
         "sourceMap": false,
         "emitDecoratorMetadata": true,
