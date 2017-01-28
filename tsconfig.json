@@ -6,12 +6,6 @@
             "es6",
             "dom"
         ],
-        "types": [
-            "inversify",
-            "inversify-express-utils",
-            "mocha",
-            "reflect-metadata"
-        ],
         "noImplicitAny": false,
         "sourceMap": false,
         "emitDecoratorMetadata": true,
@@ -19,49 +13,7 @@
         "moduleResolution": "node"
     },
     "compileOnSave": false,
-    "filesGlob": [
-        "Basic/**/*.ts",
-        "BindingDecorators/**/*.ts",
-        "MongoDB/**/*.ts"
-    ],
-    "files": [
-        "Basic/bootstrap.ts",
-        "Basic/constant/tags.ts",
-        "Basic/constant/types.ts",
-        "Basic/controller/home.ts",
-        "Basic/controller/user.ts",
-        "Basic/service/user.ts",
-        "Basic/test/controller/home.spec.ts",
-        "Basic/test/controller/user.spec.ts",
-        "Basic/test/service/user.spec.ts",
-        "BindingDecorators/bootstrap.ts",
-        "BindingDecorators/constant/tags.ts",
-        "BindingDecorators/constant/types.ts",
-        "BindingDecorators/controller/home.ts",
-        "BindingDecorators/controller/user.ts",
-        "BindingDecorators/ioc/ioc.ts",
-        "BindingDecorators/ioc/loader.ts",
-        "BindingDecorators/models/user.ts",
-        "BindingDecorators/service/user.ts",
-        "BindingDecorators/test/controller/home.spec.ts",
-        "BindingDecorators/test/controller/user.spec.ts",
-        "BindingDecorators/test/utils/mongodb/client.spec.ts",
-        "BindingDecorators/utils/mongodb/client.ts",
-        "BindingDecorators/utils/mongodb/connection.ts",
-        "MongoDB/bootstrap.ts",
-        "MongoDB/constant/tags.ts",
-        "MongoDB/constant/types.ts",
-        "MongoDB/controller/home.ts",
-        "MongoDB/controller/user.ts",
-        "MongoDB/models/user.ts",
-        "MongoDB/service/user.ts",
-        "MongoDB/test/controller/home.spec.ts",
-        "MongoDB/test/controller/user.spec.ts",
-        "MongoDB/test/utils/mongodb/client.spec.ts",
-        "MongoDB/utils/mongodb/client.ts",
-        "MongoDB/utils/mongodb/connection.ts"
-    ],
-    "atom": {
-        "rewriteTsconfig": true
-    }
+    "exclude": [
+      "node_modules"
+    ]
 }

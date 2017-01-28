@@ -1,17 +1,17 @@
 import 'reflect-metadata';
-import { Kernel, inject } from 'inversify';
+import { Container, inject } from 'inversify';
 import { autoProvide, makeProvideDecorator, makeFluentProvideDecorator } from 'inversify-binding-decorators';
 import { makeLoggerMiddleware } from 'inversify-logger-middleware';
 
-let kernel = new Kernel();
+let container = new Container();
 
 if (process.env.NODE_ENV === 'development') {
     let logger = makeLoggerMiddleware();
-    kernel.applyMiddleware(logger);
+    container.applyMiddleware(logger);
 }
 
-let provide = makeProvideDecorator(kernel);
-let fluentProvider = makeFluentProvideDecorator(kernel);
+let provide = makeProvideDecorator(container);
+let fluentProvider = makeFluentProvideDecorator(container);
 
 let provideNamed = function(identifier, name) {
     return fluentProvider(identifier)
@@ -19,4 +19,4 @@ let provideNamed = function(identifier, name) {
               .done();
 };
 
-export { kernel, autoProvide, provide, provideNamed, inject };
+export { container, autoProvide, provide, provideNamed, inject };

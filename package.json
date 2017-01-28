@@ -12,12 +12,12 @@
     "body-parser": "1.16.0",
     "express": "4.14.0",
     "helmet": "3.4.0",
-    "inversify": "2.0.1",
+    "inversify": "3.0.0",
     "inversify-binding-decorators": "3.0.0-beta.1",
     "inversify-express-utils": "3.0.0-beta.1",
     "inversify-logger-middleware": "2.0.3",
-    "mongodb": "2.2.21",
-    "morgan": "^1.7.0",
+    "mongodb": "2.2.22",
+    "morgan": "1.7.0",
     "reflect-metadata": "0.1.9"
   },
   "devDependencies": {
@@ -26,14 +26,15 @@
     "@types/chai": "3.4.34",
     "@types/express": "4.0.35",
     "@types/helmet": "0.0.33",
-    "@types/mocha": "2.2.36",
-    "@types/mongodb": "2.1.35",
-    "@types/morgan": "^1.7.32",
+    "@types/inversify": "2.0.33",
+    "@types/mocha": "2.2.38",
+    "@types/mongodb": "2.1.37",
+    "@types/morgan": "1.7.32",
     "chai": "3.5.0",
     "mocha": "3.2.0",
-    "nyc": "10.1.0",
+    "nyc": "10.1.2",
     "ts-node": "2.0.0",
-    "typescript": "2.0.10"
+    "typescript": "2.1.5"
   },
   "nyc": {
     "exclude": [
