@@ -9,7 +9,7 @@
   "author": "lholznagel",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "1.16.0",
+    "body-parser": "1.16.1",
     "express": "4.14.1",
     "helmet": "3.4.0",
     "inversify": "3.1.0",
