@@ -18,7 +18,7 @@
     "inversify-logger-middleware": "3.0.0",
     "mongodb": "2.2.24",
     "morgan": "1.8.1",
-    "reflect-metadata": "0.1.9"
+    "reflect-metadata": "0.1.10"
   },
   "devDependencies": {
     "@types/bluebird": "3.0.37",
