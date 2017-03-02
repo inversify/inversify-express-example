@@ -9,8 +9,8 @@
   "author": "lholznagel",
   "license": "MIT",
   "dependencies": {
+    "express": "5.0.0-alpha.4",
     "body-parser": "1.17.0",
-    "express": "4.14.1",
     "helmet": "3.4.1",
     "inversify": "3.1.0",
     "inversify-binding-decorators": "3.0.0",
