@@ -21,7 +21,7 @@
     "reflect-metadata": "0.1.10"
   },
   "devDependencies": {
-    "@types/bluebird": "3.5.0",
+    "@types/bluebird": "3.5.1",
     "@types/body-parser": "1.16.0",
     "@types/chai": "3.4.35",
     "@types/body-parser": "1.16.0",
