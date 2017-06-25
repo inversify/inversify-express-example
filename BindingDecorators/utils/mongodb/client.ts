@@ -1,9 +1,10 @@
 import { Db, ObjectID } from 'mongodb';
-import { injectable } from 'inversify';
+import { provide, inject } from '../../ioc/ioc';
+import TYPES from '../../constant/types';
 import { MongoDBConnection } from './connection';
 import { User } from '../../models/user';
 
-@injectable()
+@provide(TYPES.MongoDBClient)
 export class MongoDBClient {
   public db: Db;
 
