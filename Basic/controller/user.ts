@@ -1,36 +1,38 @@
-import { Controller, Get, Post, Put, Delete } from 'inversify-express-utils';
+import {
+  controller, httpGet, httpPost, httpPut, httpDelete
+} from 'inversify-express-utils';
 import { injectable, inject } from 'inversify';
 import { IUser, UserService } from '../service/user';
 import { Request } from 'express';
 import TYPES from '../constant/types';
 
 @injectable()
-@Controller('/user')
+@controller('/user')
 export class UserController {
 
   constructor(@inject(TYPES.UserService) private userService: UserService) { }
 
-  @Get('/')
+  @httpGet('/')
   public getUsers(): IUser[] {
     return this.userService.getUsers();
   }
 
-  @Get('/:id')
+  @httpGet('/:id')
   public getUser(request: Request): IUser {
     return this.userService.getUser(request.params.id);
   }
 
-  @Post('/')
+  @httpPost('/')
   public newUser(request: Request): IUser {
     return this.userService.newUser(request.body);
   }
 
-  @Put('/:id')
+  @httpPut('/:id')
   public updateUser(request: Request): IUser {
     return this.userService.updateUser(request.params.id, request.body);
   }
 
-  @Delete('/:id')
+  @httpDelete('/:id')
   public deleteUser(request: Request): string {
     return this.userService.deleteUser(request.params.id);
   }

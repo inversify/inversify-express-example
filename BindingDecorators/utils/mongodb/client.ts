@@ -1,5 +1,5 @@
 import { Db, ObjectID } from 'mongodb';
-import { provide, inject } from '../../ioc/ioc';
+import { provide } from '../../ioc/ioc';
 import TYPES from '../../constant/types';
 import { MongoDBConnection } from './connection';
 import { User } from '../../models/user';
