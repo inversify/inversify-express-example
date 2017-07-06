@@ -14,7 +14,7 @@
     "helmet": "3.6.1",
     "inversify": "4.1.1",
     "inversify-binding-decorators": "3.0.0",
-    "inversify-express-utils": "3.5.0",
+    "inversify-express-utils": "4.0.0",
     "inversify-logger-middleware": "3.0.0",
     "mongodb": "2.2.28",
     "morgan": "1.8.2",
