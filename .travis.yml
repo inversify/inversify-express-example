@@ -16,7 +16,7 @@ node_js:
   - '5.3.0'
   - '5.2.0'
   - '5.1.1'
-  - '0.12'
+ 
 
 before_install:
   - npm config set progress=false
