@@ -39,3 +39,5 @@ typings
 
 #temp files
 temp
+
+package-lock.json

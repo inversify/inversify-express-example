@@ -2,8 +2,10 @@ import 'reflect-metadata';
 import { Container, injectable } from 'inversify';
 import * as express from 'express';
 import * as morgan from 'morgan';
-import { interfaces, InversifyExpressServer, TYPE, Get, Controller } from 'inversify-express-utils';
 import { controllerFactory } from './controller';
+import {
+    interfaces, InversifyExpressServer, TYPE
+} from 'inversify-express-utils';
 
 let container = new Container();
 

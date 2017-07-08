@@ -1,15 +1,15 @@
 import { Container, injectable } from 'inversify';
-import { Controller, Get } from 'inversify-express-utils';
+import { controller, httpGet } from 'inversify-express-utils';
 import * as express from 'express';
 
 export function controllerFactory (container: Container) {
 
     @injectable()
-    @Controller('/')
+    @controller('/')
     class TestController {
         constructor() {}
 
-        @Get('/',
+        @httpGet('/',
             container.get<express.RequestHandler>('CustomMiddleware'),
             container.get<express.RequestHandler>('Morgan'))
         getUserName(req: any, res: any) {

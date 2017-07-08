@@ -10,7 +10,8 @@
         "sourceMap": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "noUnusedLocals": true
     },
     "compileOnSave": false,
     "exclude": [

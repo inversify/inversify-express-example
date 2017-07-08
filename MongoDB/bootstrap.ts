@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { interfaces, Controller, InversifyExpressServer, TYPE } from 'inversify-express-utils';
+import { interfaces, InversifyExpressServer, TYPE } from 'inversify-express-utils';
 import { Container } from 'inversify';
 import { makeLoggerMiddleware } from 'inversify-logger-middleware';
 import * as bodyParser from 'body-parser';
