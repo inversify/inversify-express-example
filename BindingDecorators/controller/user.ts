@@ -1,4 +1,6 @@
-import { Controller, Get, Post, Put, Delete, TYPE } from 'inversify-express-utils';
+import {
+  controller, httpGet, httpPost, httpPut, httpDelete, TYPE
+} from 'inversify-express-utils';
 import { provideNamed, inject } from '../ioc/ioc';
 import TYPES from '../constant/types';
 import TAGS from '../constant/tags';
@@ -8,32 +10,32 @@ import { UserService } from '../service/user';
 
 
 @provideNamed(TYPE.Controller, TAGS.UserController)
-@Controller('/user')
+@controller('/user')
 export class UserController {
 
   constructor( @inject(TYPES.UserService) private userService: UserService) { }
 
-  @Get('/')
+  @httpGet('/')
   public getUsers(): Promise<User[]> {
     return this.userService.getUsers();
   }
 
-  @Get('/:id')
+  @httpGet('/:id')
   public getUser(request: Request): Promise<User> {
     return this.userService.getUser(request.params.id);
   }
 
-  @Post('/')
+  @httpPost('/')
   public newUser(request: Request): Promise<User> {
     return this.userService.newUser(request.body);
   }
 
-  @Put('/:id')
+  @httpPut('/:id')
   public updateUser(request: Request): Promise<User> {
     return this.userService.updateUser(request.params.id, request.body);
   }
 
-  @Delete('/:id')
+  @httpDelete('/:id')
   public deleteUser(request: Request): Promise<any> {
     return this.userService.deleteUser(request.params.id);
   }
