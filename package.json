@@ -11,7 +11,7 @@
   "dependencies": {
     "express": "5.0.0-alpha.5",
     "body-parser": "1.17.2",
-    "helmet": "3.6.1",
+    "helmet": "3.7.0",
     "inversify": "4.2.0",
     "inversify-binding-decorators": "3.0.0",
     "inversify-express-utils": "4.0.0",
