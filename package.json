@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "5.0.0-alpha.5",
-    "body-parser": "1.17.2",
+    "body-parser": "1.18.0",
     "helmet": "3.8.1",
     "inversify": "4.3.0",
     "inversify-binding-decorators": "3.0.0",
