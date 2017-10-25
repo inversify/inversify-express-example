@@ -26,7 +26,7 @@
     "@types/chai": "3.5.1",
     "@types/express": "4.0.36",
     "@types/mocha": "2.2.42",
-    "@types/helmet": "0.0.36",
+    "@types/helmet": "0.0.37",
     "@types/mongodb": "2.2.7",
     "@types/morgan": "1.7.32",
     "chai": "4.1.0",
