@@ -2,10 +2,6 @@
   "name": "inversify-express-example",
   "version": "1.0.0",
   "description": "Examples for using inversify with expressjs",
-  "scripts": {
-    "test": "nyc -r=text -i ts-node/register -e .ts mocha -t 5000 --require ts-node/register  --require reflect-metadata/Reflect",
-    "test:all": "npm test **/*.spec.ts"
-  },
   "author": "lholznagel",
   "license": "MIT",
   "dependencies": {
