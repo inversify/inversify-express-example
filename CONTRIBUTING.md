@@ -17,7 +17,7 @@ npm install
 3 Run test
 
 ```sh
-nyc -e=.ts -- mocha -t=5000 --require ts-node/register  --require reflect-metadata/Reflect **/*.spec.ts
+./run-test.sh
 ```
 
 ## Guidelines
