@@ -4,9 +4,13 @@
   "description": "Examples for using inversify with expressjs",
   "author": "lholznagel",
   "license": "MIT",
+  "scripts" : {
+    "test": "nyc --clean --all --require ts-node/register --require reflect-metadata/Reflect --extension .ts -- mocha --exit --timeout 5000",
+    "test:all": "npm test **/*.spec.ts"
+  },
   "dependencies": {
-    "express": "4.16.2",
     "body-parser": "1.18.2",
+    "express": "4.16.2",
     "helmet": "3.9.0",
     "inversify": "4.5.1",
     "inversify-binding-decorators": "3.0.0",
