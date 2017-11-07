@@ -11,7 +11,6 @@ cache:
 
 node_js:
   - 8.8.1
-  - 7.10.1
 
 before_install:
   - npm config set progress=false
