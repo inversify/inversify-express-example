@@ -17,7 +17,7 @@ npm install
 3 Run unit test
 
 ```sh
-./run-test.sh
+npm run test:all
 ```
 
 ## Guidelines
