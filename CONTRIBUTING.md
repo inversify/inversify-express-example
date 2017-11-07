@@ -14,7 +14,7 @@ git clone https://github.com/YOUR_USERNAME/inversify-express-example.git
 npm install
 ```
 
-3 Run test
+3 Run unit test
 
 ```sh
 ./run-test.sh
