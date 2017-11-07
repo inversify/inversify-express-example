@@ -35,7 +35,7 @@ test_script:
   - node --version && npm --version
   # We test multiple Windows shells because of prior stdout buffering issues
   - ps: "npm --version # PowerShell" # Pass comment to PS for easier debugging
-  - cmd: ./run-test.sh
+  - cmd: nyc -e=.ts -- mocha -t=5000 --require ts-node/register  --require reflect-metadata/Reflect **/*.spec.ts
 
 cache:
 #  - node_modules
