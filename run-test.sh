@@ -1,1 +1,1 @@
-nyc -e=.ts -- mocha -t=5000 --require ts-node/register  --require reflect-metadata/Reflect **/*.spec.ts
+nyc --require ts-node/register --require reflect-metadata/Reflect --extension .ts -- mocha --timeout 5000 **/*.spec.ts
