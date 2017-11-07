@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { Container, injectable } from 'inversify';
+import { Container } from 'inversify';
 import * as express from 'express';
 import * as morgan from 'morgan';
 import { controllerFactory } from './controller';
@@ -12,8 +12,8 @@ let container = new Container();
 container.bind<express.RequestHandler>('Morgan').toConstantValue(morgan('combined'));
 container.bind<express.RequestHandler>('CustomMiddleware').toConstantValue(function customMiddleware(req: any, res: any, next: any) {
     req.user = {
-        username: 'foo',
-        password: 'bar'
+        password: 'bar',
+        username: 'foo'
     };
     next();
 });

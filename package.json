@@ -2,38 +2,38 @@
   "name": "inversify-express-example",
   "version": "1.0.0",
   "description": "Examples for using inversify with expressjs",
-  "scripts": {
-    "test": "nyc -r=text -i ts-node/register -e .ts mocha -t 5000 --require ts-node/register  --require reflect-metadata/Reflect",
-    "test:all": "npm test **/*.spec.ts"
-  },
   "author": "lholznagel",
   "license": "MIT",
+  "scripts" : {
+    "test": "nyc --clean --all --require ts-node/register --require reflect-metadata/Reflect --extension .ts -- mocha --exit --timeout 5000",
+    "test:all": "npm test **/*.spec.ts"
+  },
   "dependencies": {
-    "express": "5.0.0-alpha.5",
-    "body-parser": "1.17.2",
-    "helmet": "3.8.1",
-    "inversify": "4.3.0",
+    "body-parser": "1.18.2",
+    "express": "4.16.2",
+    "helmet": "3.9.0",
+    "inversify": "4.5.1",
     "inversify-binding-decorators": "3.0.0",
-    "inversify-express-utils": "4.0.0",
-    "inversify-logger-middleware": "3.0.0",
-    "mongodb": "2.2.31",
-    "morgan": "1.8.2",
+    "inversify-express-utils": "4.1.0",
+    "inversify-logger-middleware": "3.1.0",
+    "mongodb": "2.2.33",
+    "morgan": "1.9.0",
     "reflect-metadata": "0.1.10"
   },
   "devDependencies": {
-    "@types/bluebird": "3.5.8",
-    "@types/body-parser": "1.16.5",
-    "@types/chai": "3.5.1",
-    "@types/express": "4.0.36",
-    "@types/mocha": "2.2.42",
-    "@types/helmet": "0.0.36",
-    "@types/mongodb": "2.2.7",
-    "@types/morgan": "1.7.32",
-    "chai": "4.1.0",
-    "mocha": "3.5.0",
-    "nyc": "11.0.3",
-    "ts-node": "3.2.0",
-    "typescript": "2.5.2"
+    "@types/bluebird": "3.5.18",
+    "@types/body-parser": "1.16.7",
+    "@types/chai": "4.0.4",
+    "@types/express": "4.0.39",
+    "@types/mocha": "2.2.44",
+    "@types/helmet": "0.0.37",
+    "@types/mongodb": "2.2.15",
+    "@types/morgan": "1.7.35",
+    "chai": "4.1.2",
+    "mocha": "4.0.1",
+    "nyc": "11.3.0",
+    "ts-node": "3.3.0",
+    "typescript": "2.6.1"
   },
   "nyc": {
     "exclude": [
