@@ -1,6 +1,6 @@
 # inversify-express-example
 
-[![Travis](https://img.shields.io/travis/inversify/inversify-express-example.svg?style=flat-square&label=Travis)](https://travis-ci.org/inversify/inversify-express-example) [![Appveyor](https://img.shields.io/appveyor/ci/remojansen/inversify-express-example.svg?style=flat-square&label=Appveyor)](https://ci.appveyor.com/project/remojansen/inversify-express-example)
+[![Travis](https://img.shields.io/travis/inversify/inversify-express-example.svg?style=flat-square&label=Travis)](https://travis-ci.org/inversify/inversify-express-example)
 [![Dependencies](https://david-dm.org/inversify/inversify-express-example.svg)](https://david-dm.org/inversify/inversify-express-example#info=dependencies)
 [![img](https://david-dm.org/inversify/inversify-express-example/dev-status.svg)](https://david-dm.org/inversify/inversify-express-example/#info=devDependencies)
 [![img](https://david-dm.org/inversify/inversify-express-example/peer-status.svg)](https://david-dm.org/inversify/inversify-express-example/#info=peerDependenciess)
