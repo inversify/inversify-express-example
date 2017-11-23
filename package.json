@@ -4,7 +4,7 @@
   "description": "Examples for using inversify with expressjs",
   "author": "lholznagel",
   "license": "MIT",
-  "scripts" : {
+  "scripts": {
     "test": "nyc --clean --all --require ts-node/register --require reflect-metadata/Reflect --extension .ts -- mocha --exit --timeout 5000",
     "test:all": "npm test **/*.spec.ts"
   },
@@ -14,7 +14,7 @@
     "helmet": "3.9.0",
     "inversify": "4.5.2",
     "inversify-binding-decorators": "3.0.0",
-    "inversify-express-utils": "4.2.2",
+    "inversify-express-utils": "5.0.0-beta.1",
     "inversify-logger-middleware": "3.1.0",
     "mongodb": "2.2.33",
     "morgan": "1.9.0",

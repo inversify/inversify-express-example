@@ -1,8 +1,5 @@
-import { controller, httpGet, TYPE } from 'inversify-express-utils';
-import { provideNamed } from '../ioc/ioc';
-import TAGS from '../constant/tags';
+import { controller, httpGet } from 'inversify-express-utils';
 
-@provideNamed(TYPE.Controller, TAGS.HomeController)
 @controller('/')
 export class HomeController {
   @httpGet('/')
