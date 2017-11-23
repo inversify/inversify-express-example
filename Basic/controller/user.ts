@@ -1,7 +1,7 @@
 import {
   controller, httpGet, httpPost, httpPut, httpDelete
 } from 'inversify-express-utils';
-import { injectable, inject } from 'inversify';
+import { inject } from 'inversify';
 import { IUser, UserService } from '../service/user';
 import { Request } from 'express';
 import TYPES from '../constant/types';

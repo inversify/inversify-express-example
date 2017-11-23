@@ -1,15 +1,12 @@
 import {
-  controller, httpGet, httpPost, httpPut, httpDelete, TYPE
+  controller, httpGet, httpPost, httpPut, httpDelete
 } from 'inversify-express-utils';
-import { provideNamed, inject } from '../ioc/ioc';
+import { inject } from 'inversify';
 import TYPES from '../constant/types';
-import TAGS from '../constant/tags';
 import { Request } from 'express';
 import { User } from '../models/user';
 import { UserService } from '../service/user';
 
-
-@provideNamed(TYPE.Controller, TAGS.UserController)
 @controller('/user')
 export class UserController {
 

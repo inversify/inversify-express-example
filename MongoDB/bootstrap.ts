@@ -1,15 +1,14 @@
 import 'reflect-metadata';
-import { interfaces, InversifyExpressServer, TYPE } from 'inversify-express-utils';
+import { InversifyExpressServer } from 'inversify-express-utils';
 import { Container } from 'inversify';
 import { makeLoggerMiddleware } from 'inversify-logger-middleware';
 import * as bodyParser from 'body-parser';
 import * as helmet from 'helmet';
 import TYPES from './constant/types';
-import TAGS from './constant/tags';
-import { HomeController } from './controller/home';
-import { MongoDBClient } from './utils/mongodb/client';
-import { UserController } from './controller/user';
 import { UserService } from './service/user';
+import { MongoDBClient } from './utils/mongodb/client';
+import './controller/home';
+import './controller/user';
 
 // load everything needed to the Container
 let container = new Container();
@@ -19,8 +18,6 @@ if (process.env.NODE_ENV === 'development') {
     container.applyMiddleware(logger);
 }
 
-container.bind<interfaces.Controller>(TYPE.Controller).to(HomeController).whenTargetNamed(TAGS.HomeController);
-container.bind<interfaces.Controller>(TYPE.Controller).to(UserController).whenTargetNamed(TAGS.UserController);
 container.bind<MongoDBClient>(TYPES.MongoDBClient).to(MongoDBClient);
 container.bind<UserService>(TYPES.UserService).to(UserService);
 
