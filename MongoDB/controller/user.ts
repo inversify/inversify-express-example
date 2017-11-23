@@ -1,13 +1,12 @@
 import {
   controller, httpGet, httpPost, httpPut, httpDelete
 } from 'inversify-express-utils';
-import { injectable, inject } from 'inversify';
+import { inject } from 'inversify';
 import { Request } from 'express';
 import { User } from '../models/user';
 import { UserService } from '../service/user';
 import TYPES from '../constant/types';
 
-@injectable()
 @controller('/user')
 export class UserController {
 

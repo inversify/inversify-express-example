@@ -6,7 +6,6 @@ import { IUser, UserService } from '../service/user';
 import { Request } from 'express';
 import TYPES from '../constant/types';
 
-@injectable()
 @controller('/user')
 export class UserController {
 
