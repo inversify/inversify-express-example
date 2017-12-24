@@ -16,7 +16,7 @@
     "inversify-binding-decorators": "3.2.0",
     "inversify-express-utils": "5.2.0",
     "inversify-logger-middleware": "3.1.0",
-    "mongodb": "2.2.33",
+    "mongodb": "3.0.1",
     "morgan": "1.9.0",
     "reflect-metadata": "0.1.10"
   },
