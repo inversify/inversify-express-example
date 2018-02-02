@@ -3,6 +3,9 @@ import { expect } from 'chai';
 import { MongoDBClient } from '../../../utils/mongodb/client';
 import { User } from '../../../models/user';
 
+const connStr = 'mongodb://localhost:27017';
+const dbName = "inversify-express-example";
+
 describe('MongoDBClient', () => {
   let mongoClient: MongoDBClient;
   let mongoId: string;
@@ -10,7 +13,8 @@ describe('MongoDBClient', () => {
 
   /** Insert some testdata */
   before((done) => {
-    MongoClient.connect('mongodb://localhost:27017/inversify-express-example', (error, db: Db) => {
+    MongoClient.connect(connStr, (err, client) => {
+      const db = client.db(dbName);
       db.collection('user').drop((dropError, result) => {
         db.collection('user').insertOne({
           email: 'lorem@ipsum.com',
