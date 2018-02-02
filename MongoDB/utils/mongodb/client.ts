@@ -32,9 +32,11 @@ export class MongoDBClient {
   }
 
   public update(collection: string, objectId: string, model: User, result: (error, data) => void): void {
-    this.db.collection(collection).updateOne({ _id: new ObjectID(objectId) }, model, (error, update) => {
-      return result(error, model);
-    });
+    this.db.collection(collection).updateOne(
+      { _id: new ObjectID(objectId) },
+      { $set: model },
+      (error, update) => result(error, model)
+    );
   }
 
   public remove(collection: string, objectId: string, result: (error, data) => void): void {
