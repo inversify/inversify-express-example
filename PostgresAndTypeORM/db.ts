@@ -2,6 +2,17 @@ import { createConnection } from "typeorm";
 
 import { Movie } from "./entities/movie";
 
+/*
+Please set the env var:
+
+export DATABASE_USER=postgres \
+export DATABASE_PASSWORD=secret \
+export DATABASE_HOST=localhost \
+export DATABASE_PORT=5432 \
+export DATABASE_DB=demo
+
+*/
+
 export async function getDbConnection() {
 
     const DATABASE_HOST = process.env.DATABASE_HOST || "localhost";
