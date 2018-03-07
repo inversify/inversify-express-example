@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { Container, inject } from 'inversify';
 import { autoProvide, makeProvideDecorator, makeFluentProvideDecorator } from 'inversify-binding-decorators';
 let container = new Container();
