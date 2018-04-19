@@ -1,5 +1,5 @@
 import { AsyncContainerModule } from "inversify";
-import { Repository, Connection } from "typeorm";
+import { Repository } from "typeorm";
 import { Movie } from "./entities/movie";
 import { getDbConnection } from "./db";
 import { getRepository } from "./repositories/movie_repository";
