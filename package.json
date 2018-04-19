@@ -32,7 +32,7 @@
     "@types/mongodb": "3.0.15",
     "@types/morgan": "1.7.35",
     "chai": "4.1.2",
-    "mocha": "5.1.0",
+    "mocha": "5.1.1",
     "nyc": "11.7.1",
     "ts-node": "6.0.0",
     "typescript": "2.7.2"
