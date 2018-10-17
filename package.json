@@ -12,7 +12,7 @@
     "body-parser": "1.18.3",
     "express": "4.16.2",
     "helmet": "3.14.0",
-    "inversify": "4.13.0",
+    "inversify": "5.0.1",
     "inversify-binding-decorators": "3.2.0",
     "inversify-express-utils": "6.1.0",
     "inversify-logger-middleware": "3.1.0",
