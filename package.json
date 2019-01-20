@@ -20,7 +20,7 @@
     "morgan": "1.9.1",
     "pg": "7.7.1",
     "reflect-metadata": "0.1.12",
-    "typeorm": "0.2.10"
+    "typeorm": "0.2.12"
   },
   "devDependencies": {
     "@types/bluebird": "3.5.25",
