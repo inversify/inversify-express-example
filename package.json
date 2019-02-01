@@ -16,7 +16,7 @@
     "inversify-binding-decorators": "3.2.0",
     "inversify-express-utils": "6.2.0",
     "inversify-logger-middleware": "3.1.0",
-    "mongodb": "3.1.9",
+    "mongodb": "3.1.11",
     "morgan": "1.9.1",
     "pg": "7.8.0",
     "reflect-metadata": "0.1.12",
