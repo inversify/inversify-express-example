@@ -2,21 +2,22 @@ import 'reflect-metadata';
 import { InversifyExpressServer } from 'inversify-express-utils';
 import * as bodyParser from 'body-parser';
 import * as helmet from 'helmet';
-import { container } from './ioc/ioc';
 
 // load all injectable entities.
 // the @provide() annotation will then automatically register them.
 import './ioc/loader';
+import { Container } from 'inversify';
 
+let container = new Container();
 // start the server
 let server = new InversifyExpressServer(container);
 
-server.setConfig((app) => {
-  app.use(bodyParser.urlencoded({
+server.setConfig((theApp) => {
+  theApp.use(bodyParser.urlencoded({
     extended: true
   }));
-  app.use(bodyParser.json());
-  app.use(helmet());
+  theApp.use(bodyParser.json());
+  theApp.use(helmet());
 });
 
 let app = server.build();

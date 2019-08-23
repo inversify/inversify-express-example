@@ -4,7 +4,7 @@ import { MongoDBClient } from '../../../utils/mongodb/client';
 import { User } from '../../../models/user';
 
 const connStr = 'mongodb://localhost:27017';
-const dbName = "inversify-express-example";
+const dbName = 'inversify-express-example';
 
 describe('MongoDBClient', () => {
   let mongoClient: MongoDBClient;
