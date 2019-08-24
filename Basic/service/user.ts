@@ -12,10 +12,9 @@ export class UserService {
     email: 'lorem@ipsum.com',
     name: 'Lorem'
   }, {
-      email: 'doloe@sit.com',
-      name: 'Dolor'
-    }];
-
+    email: 'doloe@sit.com',
+    name: 'Dolor'
+  }];
 
   public getUsers(): IUser[] {
     return this.userStorage;

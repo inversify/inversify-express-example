@@ -1,4 +1,4 @@
-import { provide } from '../ioc/ioc';
+import { provide } from 'inversify-binding-decorators';
 import TYPES from '../constant/types';
 
 interface IUser {

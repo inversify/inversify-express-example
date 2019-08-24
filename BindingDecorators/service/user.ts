@@ -1,7 +1,8 @@
-import { provide, inject } from '../ioc/ioc';
+import { provide } from 'inversify-binding-decorators';
 import TYPES from '../constant/types';
 import { MongoDBClient } from '../utils/mongodb/client';
 import { User } from '../models/user';
+import { inject } from 'inversify';
 
 @provide(TYPES.UserService)
 export class UserService {
