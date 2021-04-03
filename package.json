@@ -35,8 +35,8 @@
     "@types/morgan": "1.9.0",
     "chai": "4.2.0",
     "mocha": "6.2.0",
-    "nyc": "15.0.0",
-    "ts-node": "8.3.0",
+    "nyc": "14.1.1",
+    "ts-node": "8.4.0",
     "typescript": "3.5.3",
     "updates": "^8.5.3"
   },
