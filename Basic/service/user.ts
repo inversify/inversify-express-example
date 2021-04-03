@@ -21,14 +21,7 @@ export class UserService {
   }
 
   public getUser(id: string): IUser {
-    let result: IUser;
-    this.userStorage.map(user => {
-      if (user.name === id) {
-        result = user;
-      }
-    });
-
-    return result;
+    return this.userStorage.find(user => user.name === id);
   }
 
   public newUser(user: IUser): IUser {
@@ -37,7 +30,7 @@ export class UserService {
   }
 
   public updateUser(id: string, user: IUser): IUser {
-    this.userStorage.map((entry, index) => {
+    this.userStorage.forEach((entry, index) => {
       if (entry.name === id) {
         this.userStorage[index] = user;
       }
@@ -47,14 +40,7 @@ export class UserService {
   }
 
   public deleteUser(id: string): string {
-    let updatedUser: IUser[] = [];
-    this.userStorage.map(user => {
-      if (user.name !== id) {
-        updatedUser.push(user);
-      }
-    });
-
-    this.userStorage = updatedUser;
+    this.userStorage = this.userStorage.filter(user => user.name !== id);
     return id;
   }
 }
