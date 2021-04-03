@@ -20,13 +20,13 @@ This will start up the server and you can use the example
 
 If you want to run the unit tests, simply use `npm test <example>/**/*.spec.ts`
 
-To run alle tests simply run `npm run test:all`
+To run all tests simply run `npm run test:all`
 
 ## Currently available examples
 
 Name    | Description
 ------- | -------------------------------------------------------------------------------------------------------------------------------
-Basic   | A really basic example. Nothing to fancy.
+Basic   | A really basic example. Nothing too fancy.
 MongoDB | Similar to the basic example. This time with MongoDB and some middleware. For detailed information see the readme in the folder.
 BindingDecorators | Similar to the basic example. This time with inversify-binding-decorators.
 MiddlewareInjection | A small example that shows how to inject middleware into controllers.
