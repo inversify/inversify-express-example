@@ -7,8 +7,10 @@ import * as helmet from 'helmet';
 // the @provide() annotation will then automatically register them.
 import './ioc/loader';
 import { Container } from 'inversify';
+import { buildProviderModule } from 'inversify-binding-decorators';
 
 let container = new Container();
+container.load(buildProviderModule());
 // start the server
 let server = new InversifyExpressServer(container);
 
